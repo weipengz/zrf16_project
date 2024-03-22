@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Mar 18 18:13:45 2024
+# Process ID: 146239
+# Current directory: /home/ubuntu/casper/project/rfdc_10x1
+# Command line: vivado
+# Log file: /home/ubuntu/casper/project/rfdc_10x1/vivado.log
+# Journal file: /home/ubuntu/casper/project/rfdc_10x1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/sysgen'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 7618.859 ; gain = 108.547 ; free physical = 9248 ; free virtual = 17742
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xczu49dr-ffvf1760-2-e
+INFO: [Device 21-403] Loading part xczu49dr-ffvf1760-2-e
+INFO: [Project 1-454] Reading design checkpoint '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/ip/rfdc_10x1_ip/rfdc_10x1_ip.dcp' for cell 'rfdc_10x1_ip_inst'
+INFO: [Project 1-454] Reading design checkpoint '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_axi_proto_conv_0/zrf16_49dr_bd_axi_proto_conv_0.dcp' for cell 'zrf16_49dr_bd_inst/axi_proto_conv'
+INFO: [Project 1-454] Reading design checkpoint '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_mpsoc_0/zrf16_49dr_bd_mpsoc_0.dcp' for cell 'zrf16_49dr_bd_inst/mpsoc'
+INFO: [Project 1-454] Reading design checkpoint '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_proc_sys_reset_0/zrf16_49dr_bd_proc_sys_reset_0.dcp' for cell 'zrf16_49dr_bd_inst/proc_sys_reset'
+INFO: [Project 1-454] Reading design checkpoint '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/zrf16_49dr_bd_usp_rf_data_converter_0_0.dcp' for cell 'zrf16_49dr_bd_inst/usp_rf_data_converter_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.42 . Memory (MB): peak = 8072.684 ; gain = 7.000 ; free physical = 6525 ; free virtual = 14997
+INFO: [Netlist 29-17] Analyzing 330 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_mpsoc_0/zrf16_49dr_bd_mpsoc_0.xdc] for cell 'zrf16_49dr_bd_inst/mpsoc/U0'
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_mpsoc_0/zrf16_49dr_bd_mpsoc_0.xdc] for cell 'zrf16_49dr_bd_inst/mpsoc/U0'
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_proc_sys_reset_0/zrf16_49dr_bd_proc_sys_reset_0_board.xdc] for cell 'zrf16_49dr_bd_inst/proc_sys_reset/U0'
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_proc_sys_reset_0/zrf16_49dr_bd_proc_sys_reset_0_board.xdc] for cell 'zrf16_49dr_bd_inst/proc_sys_reset/U0'
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_proc_sys_reset_0/zrf16_49dr_bd_proc_sys_reset_0.xdc] for cell 'zrf16_49dr_bd_inst/proc_sys_reset/U0'
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_proc_sys_reset_0/zrf16_49dr_bd_proc_sys_reset_0.xdc] for cell 'zrf16_49dr_bd_inst/proc_sys_reset/U0'
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0_clocks.xdc] for cell 'zrf16_49dr_bd_inst/usp_rf_data_converter_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0_clocks.xdc:56]
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0_clocks.xdc] for cell 'zrf16_49dr_bd_inst/usp_rf_data_converter_0/inst'
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/ip/rfdc_10x1_ip/constrs/rfdc_10x1.xdc] for cell 'rfdc_10x1_ip_inst/U0'
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/ip/rfdc_10x1_ip/constrs/rfdc_10x1.xdc] for cell 'rfdc_10x1_ip_inst/U0'
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.srcs/constrs_1/imports/rfdc_10x1/user_const.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.srcs/constrs_1/imports/rfdc_10x1/user_const.xdc:8]
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.srcs/constrs_1/imports/rfdc_10x1/user_const.xdc]
+Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0.xdc] for cell 'zrf16_49dr_bd_inst/usp_rf_data_converter_0/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0.xdc:277]
+Finished Parsing XDC File [/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.gen/sources_1/bd/zrf16_49dr_bd/ip/zrf16_49dr_bd_usp_rf_data_converter_0_0/synth/zrf16_49dr_bd_usp_rf_data_converter_0_0.xdc] for cell 'zrf16_49dr_bd_inst/usp_rf_data_converter_0/inst'
+INFO: [Project 1-1714] 224 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 2 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8755.602 ; gain = 0.000 ; free physical = 6171 ; free virtual = 14646
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+
+open_run: Time (s): cpu = 00:00:38 ; elapsed = 00:00:27 . Memory (MB): peak = 9069.281 ; gain = 1235.312 ; free physical = 5772 ; free virtual = 14243
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 10149.898 ; gain = 1017.520 ; free physical = 4740 ; free virtual = 13207
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 18:19:30 2024...

@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/test/ip/test_axi_gpio_0_0/sim/test_axi_gpio_0_0.vhd" \
+"../../../bd/test/ip/test_rst_mpsoc_99M_0/sim/test_rst_mpsoc_99M_0.vhd" \
+
+nosort

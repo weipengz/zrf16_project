@@ -1,0 +1,98 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2021.1                 /tools/Xilinx/Vivado/2021.1
+Matlab 9.10.0.2198249 (R2021a) Update 8 /usr/local/MATLAB/R2021a
+Vivado 2021.1                           /tools/Xilinx/Vivado/2021.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: /tmp/cceb5VFM.s: Assembler messages:
+/tmp/cceb5VFM.s:10: ...
+     Block: 'test/AddSub'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'test/AddSub'
+
+Details:
+/tmp/cceb5VFM.s: Assembler messages:
+/tmp/cceb5VFM.s:10: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:65: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:146: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:168: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:190: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:338: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:466: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:514: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1021: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1171: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1282: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1326: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1451: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1579: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1701: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1742: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1819: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1875: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1931: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:1987: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2036: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2064: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2092: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2126: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2180: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2230: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2280: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2429: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2642: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2728: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2860: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:2992: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3124: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3256: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3320: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3384: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3435: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3456: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3549: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:3790: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4056: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4164: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4212: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4255: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4308: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4385: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4495: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4546: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4612: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:4748: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5015: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5089: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5138: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5185: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5345: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5523: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5661: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5685: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5714: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5736: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5762: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5782: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5801: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5830: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5873: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5912: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5944: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5964: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:5984: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:6008: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:6039: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:6074: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:6161: Error: no such instruction: `endbr64'
+/tmp/cceb5VFM.s:6188: Error: no such instruction: `endbr64'
+Program "/usr/bin/gcc" returned non-zero status (1).
+
+Error occurred during "Simulation Initialization".
+
+--------------------------------------------------------------------------------

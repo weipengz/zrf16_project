@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Mar 18 17:42:19 2024
+# Process ID: 130619
+# Current directory: /home/ubuntu/casper/project/rfdc_10x1
+# Command line: vivado
+# Log file: /home/ubuntu/casper/project/rfdc_10x1/vivado.log
+# Journal file: /home/ubuntu/casper/project/rfdc_10x1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/sysgen'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 7636.922 ; gain = 106.547 ; free physical = 10372 ; free virtual = 18388
+update_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Device 21-403] Loading part xczu49dr-ffvf1760-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.41 . Memory (MB): peak = 8028.809 ; gain = 0.000 ; free physical = 7689 ; free virtual = 15714
+INFO: [Netlist 29-17] Analyzing 330 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8693.637 ; gain = 64.883 ; free physical = 7125 ; free virtual = 15151
+Restored from archive | CPU: 2.240000 secs | Memory: 53.821686 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8693.637 ; gain = 64.883 ; free physical = 7125 ; free virtual = 15151
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8926.363 ; gain = 0.000 ; free physical = 6907 ; free virtual = 14933
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 2 instances
+
+open_run: Time (s): cpu = 00:00:35 ; elapsed = 00:00:23 . Memory (MB): peak = 9317.613 ; gain = 1468.586 ; free physical = 6453 ; free virtual = 14480
+open_report: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 9914.793 ; gain = 468.574 ; free physical = 5838 ; free virtual = 13864
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 18 17:52:44 2024...

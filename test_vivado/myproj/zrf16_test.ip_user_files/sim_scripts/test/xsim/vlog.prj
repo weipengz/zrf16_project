@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../zrf16_test.gen/sources_1/bd/test/ipshared/ec67/hdl" --include "../../../../zrf16_test.gen/sources_1/bd/test/ipshared/bb17/hdl" \
+"../../../bd/test/ip/test_mpsoc_0/sim/test_mpsoc_0_vip_wrapper.v" \
+"../../../bd/test/ip/test_auto_pc_0/sim/test_auto_pc_0.v" \
+"../../../bd/test/sim/test.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

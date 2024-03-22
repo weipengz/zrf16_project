@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Mar 18 17:42:19 2024
+# Process ID: 130619
+# Current directory: /home/ubuntu/casper/project/rfdc_10x1
+# Command line: vivado
+# Log file: /home/ubuntu/casper/project/rfdc_10x1/vivado.log
+# Journal file: /home/ubuntu/casper/project/rfdc_10x1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/casper/project/rfdc_10x1/rfdc_10x1/myproj/myproj.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1

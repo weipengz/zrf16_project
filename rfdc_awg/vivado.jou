@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Mar 22 00:28:37 2024
+# Process ID: 18691
+# Current directory: /home/ubuntu/casper/zrf16_project/rfdc_awg
+# Command line: vivado
+# Log file: /home/ubuntu/casper/zrf16_project/rfdc_awg/vivado.log
+# Journal file: /home/ubuntu/casper/zrf16_project/rfdc_awg/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/casper/zrf16_project/rfdc_awg/rfdc_awg/myproj/myproj.xpr
+open_bd_design {/home/ubuntu/casper/zrf16_project/rfdc_awg/rfdc_awg/myproj/myproj.srcs/sources_1/bd/zrf16_49dr_bd/zrf16_49dr_bd.bd}
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.ADC0_Multi_Tile_Sync {true}] [get_bd_cells usp_rf_data_converter_0]
+endgroup
+save_bd_design
+reset_run zrf16_49dr_bd_usp_rf_data_converter_0_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run impl_1

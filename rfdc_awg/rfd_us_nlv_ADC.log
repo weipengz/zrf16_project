@@ -1,0 +1,1387 @@
+# Copyright (C) 1994-2019, Concept Engineering GmbH.
+# All Rights Reserved.  Cmd=logfile.
+# Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+# License cookie [G|T|S|B|*] for HR="Xilinx Inc."
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+property attrfontsize 8
+property fillcolor1
+#R #441133
+property fillcolor5
+#R #651b4d
+property -colorscheme lightblue
+property shadowstyle 1
+property showpinname 5
+property showcellname 1
+property showattribute 1
+property showinstname 1
+property boxminwidth 40
+property boxminheight 40
+#CMD bind stroke-1 -action {}
+#CMD bind stroke-nw-1 -action callback -echo_type line -echo_text {Zoom fit}
+#CMD bind stroke-nw-1 -action zoom_fit -echo_type line -echo_text {Zoom fit}
+#CMD bind stroke-ne-1 -action zoom_out -echo_type line -echo_text {Zoom -%z}
+#CMD bind stroke-se-1 -action zoom_in -echo_type rectangle -autoscroll -echo_text {Zoom area}
+#CMD bind stroke-sw-1 -action zoom_in2 -echo_type line -echo_text {Zoom +%z}
+module new rfconverter
+#  * Current module is rfconverter 
+load symbol TILE_SYMBOL v HIERBOX port a in
+increment -const
+load inst Tile_224 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_224 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_224 a } -attr @name {}
+attribute {hierPin Tile_224 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC3.m03 m03 v -hier Tile_224 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC3.mixer ADC3mixer syn -hier Tile_224 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC3 ADC3 syn -hier Tile_224 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3} -attr @name {}
+attribute {pin ADC.Tile_224.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC2.m02 m02 v -hier Tile_224 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC2.mixer ADC2mixer syn -hier Tile_224 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC2 ADC2 syn -hier Tile_224 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2} -attr @name {}
+attribute {pin ADC.Tile_224.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC1.m01 m01 v -hier Tile_224 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC1.mixer ADC1mixer syn -hier Tile_224 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC1 ADC1 syn -hier Tile_224 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1} -attr @name {}
+attribute {pin ADC.Tile_224.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC0.m00 m00 v -hier Tile_224 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC0.mixer ADC0mixer syn -hier Tile_224 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC0 ADC0 syn -hier Tile_224 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0} -attr @name {}
+attribute {pin ADC.Tile_224.ADC0 TX } -attr @name {}
+load inst Tile_225 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_225 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_225 a } -attr @name {}
+attribute {hierPin Tile_225 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC3.m03 m03 v -hier Tile_225 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC3.mixer ADC3mixer syn -hier Tile_225 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC3 ADC3 syn -hier Tile_225 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3} -attr @name {}
+attribute {pin ADC.Tile_225.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC2.m02 m02 v -hier Tile_225 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC2.mixer ADC2mixer syn -hier Tile_225 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC2 ADC2 syn -hier Tile_225 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2} -attr @name {}
+attribute {pin ADC.Tile_225.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC1.m01 m01 v -hier Tile_225 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC1.mixer ADC1mixer syn -hier Tile_225 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC1 ADC1 syn -hier Tile_225 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1} -attr @name {}
+attribute {pin ADC.Tile_225.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC0.m00 m00 v -hier Tile_225 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC0.mixer ADC0mixer syn -hier Tile_225 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC0 ADC0 syn -hier Tile_225 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0} -attr @name {}
+attribute {pin ADC.Tile_225.ADC0 TX } -attr @name {}
+load inst Tile_226 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_226 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_226 a } -attr @name {}
+attribute {hierPin Tile_226 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC3.m03 m03 v -hier Tile_226 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC3.mixer ADC3mixer syn -hier Tile_226 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC3 ADC3 syn -hier Tile_226 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3} -attr @name {}
+attribute {pin ADC.Tile_226.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC2.m02 m02 v -hier Tile_226 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC2.mixer ADC2mixer syn -hier Tile_226 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC2 ADC2 syn -hier Tile_226 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2} -attr @name {}
+attribute {pin ADC.Tile_226.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC1.m01 m01 v -hier Tile_226 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC1.mixer ADC1mixer syn -hier Tile_226 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC1 ADC1 syn -hier Tile_226 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1} -attr @name {}
+attribute {pin ADC.Tile_226.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC0.m00 m00 v -hier Tile_226 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC0.mixer ADC0mixer syn -hier Tile_226 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC0 ADC0 syn -hier Tile_226 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0} -attr @name {}
+attribute {pin ADC.Tile_226.ADC0 TX } -attr @name {}
+load inst Tile_227 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_227 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_227 a } -attr @name {}
+attribute {hierPin Tile_227 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC3.m03 m03 v -hier Tile_227 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC3.mixer ADC3mixer syn -hier Tile_227 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC3 ADC3 syn -hier Tile_227 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3} -attr @name {}
+attribute {pin ADC.Tile_227.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC2.m02 m02 v -hier Tile_227 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC2.mixer ADC2mixer syn -hier Tile_227 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC2 ADC2 syn -hier Tile_227 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2} -attr @name {}
+attribute {pin ADC.Tile_227.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC1.m01 m01 v -hier Tile_227 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC1.mixer ADC1mixer syn -hier Tile_227 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC1 ADC1 syn -hier Tile_227 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1} -attr @name {}
+attribute {pin ADC.Tile_227.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC0.m00 m00 v -hier Tile_227 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC0.mixer ADC0mixer syn -hier Tile_227 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC0 ADC0 syn -hier Tile_227 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0} -attr @name {}
+attribute {pin ADC.Tile_227.ADC0 TX } -attr @name {}
+show
+# Starting Split Pages                                                   60.74
+# Split Pages 52 Comps, 0 Nets 0 NetBundles 0 CGraphics                  60.74
+# KwayPart started for 52 comps, 0 nets                                  60.74
+# Init done: 1 nodes (1 locked nodes), 0 edges                           60.74
+# Startpart done: 1 parts                                                60.74
+# KwayPart done                                                          60.74
+# End of Split Pages: 1 pages                                            60.74
+# End of Split Pages                                                     60.74
+# Generating Regions for Page 1:   52 Comps,    0 Nets                   60.74
+# Analyze                                                                60.74
+# Levelize                                                               60.74
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.74
+# Nets                                                                   60.74
+# Place                                                                  60.74
+# PlaceNets                                                              60.74
+# SpaceY                                                                 60.74
+# Track                                                                  60.74
+# SpaceX                                                                 60.74
+# Wire                                                                   60.74
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.74
+# End of doGenerate                                                      60.74
+# Analyze                                                                60.74
+# Levelize                                                               60.74
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.74
+# Nets                                                                   60.74
+# Place                                                                  60.74
+# PlaceNets                                                              60.74
+# SpaceY                                                                 60.74
+# Track                                                                  60.74
+# SpaceX                                                                 60.74
+# Wire                                                                   60.74
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.74
+# End of doGenerate                                                      60.74
+# Analyze                                                                60.74
+# Levelize                                                               60.74
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.74
+# Nets                                                                   60.74
+# Place                                                                  60.74
+# PlaceNets                                                              60.74
+# SpaceY                                                                 60.74
+# Track                                                                  60.74
+# SpaceX                                                                 60.74
+# Wire                                                                   60.74
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.74
+# End of doGenerate                                                      60.74
+# Analyze                                                                60.74
+# Levelize                                                               60.74
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.74
+# Nets                                                                   60.74
+# Place                                                                  60.74
+# PlaceNets                                                              60.74
+# SpaceY                                                                 60.74
+# Track                                                                  60.74
+# SpaceX                                                                 60.74
+# Wire                                                                   60.74
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.74
+# End of doGenerate                                                      60.74
+# Analyze                                                                60.74
+# Levelize                                                               60.74
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              60.74
+# Nets                                                                   60.74
+# Place                                                                  60.74
+# PlaceNets                                                              60.74
+# SpaceY                                                                 60.74
+# Track                                                                  60.74
+# SpaceX                                                                 60.74
+# Wire                                                                   60.74
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.74
+# End of doGenerate                                                      60.74
+# End of Generating Regions for Page 1                                   60.74
+scrollpos 112 864
+zoom -x 0 -y 0 0.5
+scrollpos 70 540
+#R 0.5
+#CMD scrollpos 0 0
+scrollpos 0 0
+module new rfconverter
+#  * Current module is rfconverter 
+load symbol TILE_SYMBOL v HIERBOX port a in
+increment -const
+load inst Tile_224 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_224 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_224 a } -attr @name {}
+attribute {hierPin Tile_224 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC3.m03 m03 v -hier Tile_224 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC3.mixer ADC3mixer syn -hier Tile_224 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC3 ADC3 syn -hier Tile_224 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3} -attr @name {}
+attribute {pin ADC.Tile_224.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC2.m02 m02 v -hier Tile_224 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC2.mixer ADC2mixer syn -hier Tile_224 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC2 ADC2 syn -hier Tile_224 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2} -attr @name {}
+attribute {pin ADC.Tile_224.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC1.m01 m01 v -hier Tile_224 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC1.mixer ADC1mixer syn -hier Tile_224 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC1 ADC1 syn -hier Tile_224 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1} -attr @name {}
+attribute {pin ADC.Tile_224.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_224.ADC0.m00 m00 v -hier Tile_224 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_224.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_224.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_224.ADC0.mixer ADC0mixer syn -hier Tile_224 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_224.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_224.ADC0 ADC0 syn -hier Tile_224 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0} -attr @name {}
+attribute {pin ADC.Tile_224.ADC0 TX } -attr @name {}
+load inst Tile_225 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_225 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_225 a } -attr @name {}
+attribute {hierPin Tile_225 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC3.m03 m03 v -hier Tile_225 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC3.mixer ADC3mixer syn -hier Tile_225 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC3 ADC3 syn -hier Tile_225 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3} -attr @name {}
+attribute {pin ADC.Tile_225.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC2.m02 m02 v -hier Tile_225 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC2.mixer ADC2mixer syn -hier Tile_225 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC2 ADC2 syn -hier Tile_225 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2} -attr @name {}
+attribute {pin ADC.Tile_225.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC1.m01 m01 v -hier Tile_225 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC1.mixer ADC1mixer syn -hier Tile_225 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC1 ADC1 syn -hier Tile_225 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1} -attr @name {}
+attribute {pin ADC.Tile_225.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_225.ADC0.m00 m00 v -hier Tile_225 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_225.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_225.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_225.ADC0.mixer ADC0mixer syn -hier Tile_225 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_225.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_225.ADC0 ADC0 syn -hier Tile_225 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0} -attr @name {}
+attribute {pin ADC.Tile_225.ADC0 TX } -attr @name {}
+load inst Tile_226 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_226 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_226 a } -attr @name {}
+attribute {hierPin Tile_226 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC3.m03 m03 v -hier Tile_226 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC3.mixer ADC3mixer syn -hier Tile_226 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC3 ADC3 syn -hier Tile_226 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3} -attr @name {}
+attribute {pin ADC.Tile_226.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC2.m02 m02 v -hier Tile_226 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC2.mixer ADC2mixer syn -hier Tile_226 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC2 ADC2 syn -hier Tile_226 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2} -attr @name {}
+attribute {pin ADC.Tile_226.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC1.m01 m01 v -hier Tile_226 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC1.mixer ADC1mixer syn -hier Tile_226 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC1 ADC1 syn -hier Tile_226 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1} -attr @name {}
+attribute {pin ADC.Tile_226.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_226.ADC0.m00 m00 v -hier Tile_226 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_226.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_226.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_226.ADC0.mixer ADC0mixer syn -hier Tile_226 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_226.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_226.ADC0 ADC0 syn -hier Tile_226 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0} -attr @name {}
+attribute {pin ADC.Tile_226.ADC0 TX } -attr @name {}
+load inst Tile_227 TILE_SYMBOL v -pg 1 -y 200 -x 1 -autohide -attr @cell Tile_227 -attr @name {} -attr @fillcolor #f9f7f7
+attribute {pin Tile_227 a } -attr @name {}
+attribute {hierPin Tile_227 a } -attr @name {}
+load symbol m03 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC3.m03 m03 v -hier Tile_227 -pg 1 -y 201 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC3.m03 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC3.m03 RX } -attr @name {}
+load symbol ADC3mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC3.mixer ADC3mixer syn -hier Tile_227 -pg 1 -y 201 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC3.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC3.mixer RIGHT_I} -attr @name I
+load symbol ADC3 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC3 ADC3 syn -hier Tile_227 -pg 1 -y 201 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3} -attr @name {}
+attribute {pin ADC.Tile_227.ADC3 TX } -attr @name {}
+load symbol m02 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC2.m02 m02 v -hier Tile_227 -pg 1 -y 301 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC2.m02 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC2.m02 RX } -attr @name {}
+load symbol ADC2mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC2.mixer ADC2mixer syn -hier Tile_227 -pg 1 -y 301 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC2.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC2.mixer RIGHT_I} -attr @name I
+load symbol ADC2 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC2 ADC2 syn -hier Tile_227 -pg 1 -y 301 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2} -attr @name {}
+attribute {pin ADC.Tile_227.ADC2 TX } -attr @name {}
+load symbol m01 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC1.m01 m01 v -hier Tile_227 -pg 1 -y 401 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC1.m01 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC1.m01 RX } -attr @name {}
+load symbol ADC1mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC1.mixer ADC1mixer syn -hier Tile_227 -pg 1 -y 401 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC1.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC1.mixer RIGHT_I} -attr @name I
+load symbol ADC1 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC1 ADC1 syn -hier Tile_227 -pg 1 -y 401 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1} -attr @name {}
+attribute {pin ADC.Tile_227.ADC1 TX } -attr @name {}
+load symbol m00 v HIERGEN port RX in attrdsp @name -cc 0 0 10
+load inst ADC.Tile_227.ADC0.m00 m00 v -hier Tile_227 -pg 1 -y 501 -x 200 -resize 40 40 -autohide -attr @name {}
+attribute {inst ADC.Tile_227.ADC0.m00 } -attr @fillcolor #aaa7a7
+attribute {pin ADC.Tile_227.ADC0.m00 RX } -attr @name {}
+load symbol ADC0mixer syn HIERGEN port LEFT_Q in.left.sq port LEFT_I in.left.sq port RIGHT_Q out.right.sq port RIGHT_I out.right.sq attrdsp @cell -lc 50 50 14
+load inst ADC.Tile_227.ADC0.mixer ADC0mixer syn -hier Tile_227 -pg 1 -y 501 -x 190 -resize 80 80 -attr @cell Mixer -attr @name {}
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_Q} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_I} -attr @fillcolor #ffffff
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC0.mixer LEFT_I} -attr @name I
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_Q} -attr @name Q
+attribute {pin ADC.Tile_227.ADC0.mixer RIGHT_I} -attr @name I
+load symbol ADC0 syn HIERGEN port TX out
+load inst ADC.Tile_227.ADC0 ADC0 syn -hier Tile_227 -pg 1 -y 501 -x 1 -resize 60 60 -autohide
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0} -attr @name {}
+attribute {pin ADC.Tile_227.ADC0 TX } -attr @name {}
+show
+# Starting Split Pages                                                   60.75
+# Split Pages 52 Comps, 0 Nets 0 NetBundles 0 CGraphics                  60.75
+# KwayPart started for 52 comps, 0 nets                                  60.75
+# Init done: 1 nodes (1 locked nodes), 0 edges                           60.75
+# Startpart done: 1 parts                                                60.75
+# KwayPart done                                                          60.75
+# End of Split Pages: 1 pages                                            60.75
+# End of Split Pages                                                     60.75
+# Generating Regions for Page 1:   52 Comps,    0 Nets                   60.75
+# Analyze                                                                60.75
+# Levelize                                                               60.75
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.75
+# Nets                                                                   60.75
+# Place                                                                  60.75
+# PlaceNets                                                              60.75
+# SpaceY                                                                 60.75
+# Track                                                                  60.75
+# SpaceX                                                                 60.75
+# Wire                                                                   60.75
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.75
+# End of doGenerate                                                      60.75
+# Analyze                                                                60.75
+# Levelize                                                               60.75
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.75
+# Nets                                                                   60.75
+# Place                                                                  60.75
+# PlaceNets                                                              60.75
+# SpaceY                                                                 60.75
+# Track                                                                  60.75
+# SpaceX                                                                 60.75
+# Wire                                                                   60.75
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.75
+# End of doGenerate                                                      60.75
+# Analyze                                                                60.75
+# Levelize                                                               60.75
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.75
+# Nets                                                                   60.75
+# Place                                                                  60.75
+# PlaceNets                                                              60.75
+# SpaceY                                                                 60.75
+# Track                                                                  60.75
+# SpaceX                                                                 60.75
+# Wire                                                                   60.75
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.75
+# End of doGenerate                                                      60.75
+# Analyze                                                                60.75
+# Levelize                                                               60.75
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.75
+# Nets                                                                   60.75
+# Place                                                                  60.75
+# PlaceNets                                                              60.75
+# SpaceY                                                                 60.75
+# Track                                                                  60.75
+# SpaceX                                                                 60.75
+# Wire                                                                   60.75
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.75
+# End of doGenerate                                                      60.75
+# Analyze                                                                60.75
+# Levelize                                                               60.75
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              60.75
+# Nets                                                                   60.75
+# Place                                                                  60.75
+# PlaceNets                                                              60.75
+# SpaceY                                                                 60.75
+# Track                                                                  60.75
+# SpaceX                                                                 60.75
+# Wire                                                                   60.75
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.75
+# End of doGenerate                                                      60.75
+# End of Generating Regions for Page 1                                   60.75
+scrollpos 112 864
+zoom -x 0 -y 0 0.5
+scrollpos 70 540
+#R 0.5
+#CMD scrollpos 0 0
+scrollpos 0 0
+increment -const
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.m03} -attr @name Real
+load net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer -pin ADC.Tile_224.ADC0 TX -pin ADC.Tile_224.ADC0.mixer LEFT_I
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #a7c491
+load net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00 -pin ADC.Tile_224.ADC0.mixer RIGHT_I -pin ADC.Tile_224.ADC0.m00 RX
+show
+# Starting Split Pages                                                   60.77
+# Split Pages 52 Comps, 2 Nets 0 NetBundles 0 CGraphics                  60.77
+# KwayPart started for 52 comps, 2 nets                                  60.77
+# Init done: 1 nodes (1 locked nodes), 0 edges                           60.77
+# Startpart done: 1 parts                                                60.77
+# KwayPart done                                                          60.77
+# End of Split Pages: 1 pages                                            60.77
+# End of Split Pages                                                     60.77
+# Generating Regions for Page 1:   52 Comps,    2 Nets                   60.77
+# Analyze                                                                60.77
+# Levelize                                                               60.77
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.77
+# Nets                                                                   60.77
+# Place                                                                  60.77
+# PlaceNets                                                              60.77
+# SpaceY                                                                 60.77
+# Track                                                                  60.77
+# SpaceX                                                                 60.77
+# Wire                                                                   60.77
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.77
+# End of doGenerate                                                      60.77
+# Analyze                                                                60.77
+# Levelize                                                               60.77
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.77
+# Nets                                                                   60.77
+# Place                                                                  60.77
+# PlaceNets                                                              60.77
+# SpaceY                                                                 60.77
+# Track                                                                  60.77
+# SpaceX                                                                 60.77
+# Wire                                                                   60.77
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.77
+# End of doGenerate                                                      60.77
+# Analyze                                                                60.77
+# Levelize                                                               60.77
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.77
+# Nets                                                                   60.77
+# Place                                                                  60.77
+# PlaceNets                                                              60.77
+# SpaceY                                                                 60.77
+# Track                                                                  60.77
+# SpaceX                                                                 60.77
+# Wire                                                                   60.77
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.77
+# End of doGenerate                                                      60.77
+# Analyze                                                                60.77
+# Levelize                                                               60.77
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             60.77
+# Nets                                                                   60.77
+# Place                                                                  60.77
+# PlaceNets                                                              60.77
+# SpaceY                                                                 60.77
+# Track                                                                  60.77
+# SpaceX                                                                 60.77
+# Wire                                                                   60.77
+# End of Wire: 2 nets, 2 ch, wire: 8-->8 (0 with wbits)                  60.77
+# End of doGenerate                                                      60.77
+# Analyze                                                                60.77
+# Levelize                                                               60.77
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              60.77
+# Nets                                                                   60.77
+# Place                                                                  60.77
+# PlaceNets                                                              60.77
+# SpaceY                                                                 60.77
+# Track                                                                  60.77
+# SpaceX                                                                 60.77
+# Wire                                                                   60.77
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  60.77
+# End of doGenerate                                                      60.77
+# End of Generating Regions for Page 1                                   60.77
+#CMD scrollpos -100 -30
+scrollpos -100 -30
+fullfit
+scrollpos -251 -414
+fullfit
+scrollpos -180 65
+scrollpos -180 65
+scrollpos -186 66
+#CMD scrollpos
+#R -186 66
+increment -const
+increment -const
+unload net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer
+increment -const
+unload net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.m03} -attr @name Real
+load net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer -pin ADC.Tile_224.ADC0 TX -pin ADC.Tile_224.ADC0.mixer LEFT_I
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #a7c491
+load net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00 -pin ADC.Tile_224.ADC0.mixer RIGHT_I -pin ADC.Tile_224.ADC0.m00 RX
+show
+# Starting Split Pages                                                   67.51
+# Split Pages 52 Comps, 2 Nets 0 NetBundles 0 CGraphics                  67.51
+# KwayPart started for 52 comps, 2 nets                                  67.51
+# Init done: 1 nodes (1 locked nodes), 0 edges                           67.51
+# Startpart done: 1 parts                                                67.51
+# KwayPart done                                                          67.51
+# End of Split Pages: 1 pages                                            67.51
+# End of Split Pages                                                     67.51
+# Generating Regions for Page 1:   52 Comps,    2 Nets                   67.51
+# Analyze                                                                67.51
+# Levelize                                                               67.51
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             67.51
+# Nets                                                                   67.51
+# Place                                                                  67.51
+# PlaceNets                                                              67.51
+# SpaceY                                                                 67.51
+# Track                                                                  67.51
+# SpaceX                                                                 67.51
+# Wire                                                                   67.51
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  67.51
+# End of doGenerate                                                      67.51
+# Analyze                                                                67.51
+# Levelize                                                               67.51
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             67.51
+# Nets                                                                   67.51
+# Place                                                                  67.51
+# PlaceNets                                                              67.51
+# SpaceY                                                                 67.51
+# Track                                                                  67.51
+# SpaceX                                                                 67.51
+# Wire                                                                   67.51
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  67.51
+# End of doGenerate                                                      67.51
+# Analyze                                                                67.51
+# Levelize                                                               67.51
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             67.51
+# Nets                                                                   67.51
+# Place                                                                  67.51
+# PlaceNets                                                              67.51
+# SpaceY                                                                 67.51
+# Track                                                                  67.51
+# SpaceX                                                                 67.51
+# Wire                                                                   67.51
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  67.51
+# End of doGenerate                                                      67.51
+# Analyze                                                                67.51
+# Levelize                                                               67.51
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             67.51
+# Nets                                                                   67.51
+# Place                                                                  67.51
+# PlaceNets                                                              67.51
+# SpaceY                                                                 67.51
+# Track                                                                  67.51
+# SpaceX                                                                 67.51
+# Wire                                                                   67.51
+# End of Wire: 2 nets, 2 ch, wire: 8-->8 (0 with wbits)                  67.51
+# End of doGenerate                                                      67.51
+# Analyze                                                                67.51
+# Levelize                                                               67.51
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              67.51
+# Nets                                                                   67.51
+# Place                                                                  67.51
+# PlaceNets                                                              67.51
+# SpaceY                                                                 67.51
+# Track                                                                  67.51
+# SpaceX                                                                 67.51
+# Wire                                                                   67.51
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  67.51
+# End of doGenerate                                                      67.51
+# End of Generating Regions for Page 1                                   67.51
+scrollpos -186 67
+scrollpos -186 68
+#CMD scrollpos -100 -30
+scrollpos -100 -30
+#CMD scrollpos -186 66
+scrollpos -186 66
+#CMD scrollpos
+#R -186 66
+increment -const
+increment -const
+unload net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer
+increment -const
+unload net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.m03} -attr @name Real
+load net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer -pin ADC.Tile_224.ADC0 TX -pin ADC.Tile_224.ADC0.mixer LEFT_I
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #a7c491
+load net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00 -pin ADC.Tile_224.ADC0.mixer RIGHT_I -pin ADC.Tile_224.ADC0.m00 RX
+show
+# Starting Split Pages                                                   77.14
+# Split Pages 52 Comps, 2 Nets 0 NetBundles 0 CGraphics                  77.14
+# KwayPart started for 52 comps, 2 nets                                  77.14
+# Init done: 1 nodes (1 locked nodes), 0 edges                           77.14
+# Startpart done: 1 parts                                                77.14
+# KwayPart done                                                          77.14
+# End of Split Pages: 1 pages                                            77.14
+# End of Split Pages                                                     77.14
+# Generating Regions for Page 1:   52 Comps,    2 Nets                   77.14
+# Analyze                                                                77.14
+# Levelize                                                               77.14
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.14
+# Nets                                                                   77.14
+# Place                                                                  77.14
+# PlaceNets                                                              77.14
+# SpaceY                                                                 77.14
+# Track                                                                  77.14
+# SpaceX                                                                 77.14
+# Wire                                                                   77.14
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.14
+# End of doGenerate                                                      77.14
+# Analyze                                                                77.14
+# Levelize                                                               77.14
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.14
+# Nets                                                                   77.14
+# Place                                                                  77.14
+# PlaceNets                                                              77.14
+# SpaceY                                                                 77.14
+# Track                                                                  77.14
+# SpaceX                                                                 77.14
+# Wire                                                                   77.14
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.14
+# End of doGenerate                                                      77.14
+# Analyze                                                                77.14
+# Levelize                                                               77.14
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.14
+# Nets                                                                   77.14
+# Place                                                                  77.14
+# PlaceNets                                                              77.14
+# SpaceY                                                                 77.14
+# Track                                                                  77.14
+# SpaceX                                                                 77.14
+# Wire                                                                   77.14
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.14
+# End of doGenerate                                                      77.14
+# Analyze                                                                77.14
+# Levelize                                                               77.14
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.14
+# Nets                                                                   77.14
+# Place                                                                  77.14
+# PlaceNets                                                              77.14
+# SpaceY                                                                 77.14
+# Track                                                                  77.14
+# SpaceX                                                                 77.14
+# Wire                                                                   77.14
+# End of Wire: 2 nets, 2 ch, wire: 8-->8 (0 with wbits)                  77.14
+# End of doGenerate                                                      77.14
+# Analyze                                                                77.14
+# Levelize                                                               77.14
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              77.14
+# Nets                                                                   77.14
+# Place                                                                  77.14
+# PlaceNets                                                              77.14
+# SpaceY                                                                 77.14
+# Track                                                                  77.14
+# SpaceX                                                                 77.14
+# Wire                                                                   77.14
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.14
+# End of doGenerate                                                      77.14
+# End of Generating Regions for Page 1                                   77.14
+scrollpos -186 67
+scrollpos -186 68
+#CMD scrollpos -100 -30
+scrollpos -100 -30
+#CMD scrollpos -186 66
+scrollpos -186 66
+#CMD scrollpos
+#R -186 66
+increment -const
+increment -const
+unload net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer
+increment -const
+unload net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_224.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_224.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_224.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_224.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_225.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_225.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_225.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_225.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_225.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_226.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_226.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_226.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_226.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_226.ADC3.m03} -attr @name Real
+attribute {inst ADC.Tile_227.ADC0} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC0.m00} -attr @name Real
+attribute {inst ADC.Tile_227.ADC1} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC1.m01} -attr @name Real
+attribute {inst ADC.Tile_227.ADC2} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC2.m02} -attr @name Real
+attribute {inst ADC.Tile_227.ADC3} -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.mixer } -attr @fillcolor #e2e0de
+attribute {inst ADC.Tile_227.ADC3.m03} -attr @name Real
+load net net.ADC.Tile_224.ADC0Tile_224.ADC0.mixer -pin ADC.Tile_224.ADC0 TX -pin ADC.Tile_224.ADC0.mixer LEFT_I
+attribute {inst ADC.Tile_224.ADC0} -attr @fillcolor #a7c491
+load net net.ADC.Tile_224.ADC0.mixer.RIGHT.Tile_224.ADC0.m00 -pin ADC.Tile_224.ADC0.mixer RIGHT_I -pin ADC.Tile_224.ADC0.m00 RX
+show
+# Starting Split Pages                                                   77.59
+# Split Pages 52 Comps, 2 Nets 0 NetBundles 0 CGraphics                  77.60
+# KwayPart started for 52 comps, 2 nets                                  77.60
+# Init done: 1 nodes (1 locked nodes), 0 edges                           77.60
+# Startpart done: 1 parts                                                77.60
+# KwayPart done                                                          77.60
+# End of Split Pages: 1 pages                                            77.60
+# End of Split Pages                                                     77.60
+# Generating Regions for Page 1:   52 Comps,    2 Nets                   77.60
+# Analyze                                                                77.60
+# Levelize                                                               77.60
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.60
+# Nets                                                                   77.60
+# Place                                                                  77.60
+# PlaceNets                                                              77.60
+# SpaceY                                                                 77.60
+# Track                                                                  77.60
+# SpaceX                                                                 77.60
+# Wire                                                                   77.60
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.60
+# End of doGenerate                                                      77.60
+# Analyze                                                                77.60
+# Levelize                                                               77.60
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.60
+# Nets                                                                   77.60
+# Place                                                                  77.60
+# PlaceNets                                                              77.60
+# SpaceY                                                                 77.60
+# Track                                                                  77.60
+# SpaceX                                                                 77.60
+# Wire                                                                   77.60
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.60
+# End of doGenerate                                                      77.60
+# Analyze                                                                77.60
+# Levelize                                                               77.60
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.60
+# Nets                                                                   77.60
+# Place                                                                  77.60
+# PlaceNets                                                              77.60
+# SpaceY                                                                 77.60
+# Track                                                                  77.60
+# SpaceX                                                                 77.60
+# Wire                                                                   77.60
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.60
+# End of doGenerate                                                      77.60
+# Analyze                                                                77.60
+# Levelize                                                               77.60
+# End of LevelAssign mode=I, 4 Levels, 12 Comps, limit=30000             77.60
+# Nets                                                                   77.60
+# Place                                                                  77.60
+# PlaceNets                                                              77.60
+# SpaceY                                                                 77.60
+# Track                                                                  77.60
+# SpaceX                                                                 77.60
+# Wire                                                                   77.60
+# End of Wire: 2 nets, 2 ch, wire: 8-->8 (0 with wbits)                  77.60
+# End of doGenerate                                                      77.60
+# Analyze                                                                77.60
+# Levelize                                                               77.60
+# End of LevelAssign mode=I, 2 Levels, 4 Comps, limit=30000              77.60
+# Nets                                                                   77.60
+# Place                                                                  77.60
+# PlaceNets                                                              77.60
+# SpaceY                                                                 77.60
+# Track                                                                  77.60
+# SpaceX                                                                 77.60
+# Wire                                                                   77.60
+# End of Wire: 0 nets, 0 ch, wire: 0-->0 (0 with wbits)                  77.60
+# End of doGenerate                                                      77.60
+# End of Generating Regions for Page 1                                   77.60
+scrollpos -186 67
+scrollpos -186 68
+#CMD scrollpos -100 -30
+scrollpos -100 -30
+#CMD scrollpos -186 66
+scrollpos -186 66
